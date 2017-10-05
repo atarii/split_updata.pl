@@ -118,7 +118,7 @@ sub dump_file {
     $sourceCRC=slimhexdump($buffer);
     
     my ($fileName) = "$fileType" . ".img";
-    if ($fileName =~ /$matching/) {
+    if ($fileName =~ /^$matching.img/i) {
       print "extracting $fileName ($fileSize)...";
     
       # Dump the payload.
